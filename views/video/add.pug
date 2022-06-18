@@ -1,0 +1,27 @@
+include ../partials/header
+body
+    <h3 class="d-flex justify-content-center mt-4">Add video</h3>
+    if message
+        <h3 class="d-flex justify-content-center mt-4"  style="color:#00F700">#{message}</h3>
+    else 
+        <h3 class="d-flex justify-content-center mt-4"></h3>
+<div class="mt-4 d-flex justify-content-center ">
+    <form method="post" action="/add" class="w-25">
+        <div class="mb-3">
+            <label for="nameVideo" class="form-label">Name Video</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp"name="nameVideo"/>
+        </div>
+        <div class="mb-3">
+            <label for="adder" class="form-label">Adder</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" name="adder"/>
+        </div>
+        <div class="mb-3">
+            <label for="videoId" class="form-label">Video ID</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="videoId" />
+        </div>
+
+        <button type="submit" class="btn btn-primary cursor-pointer">Submit</button>
+        <a href="/" type="submit" class="btn btn-outline-primary mx-4 cursor-pointer">Home</a>
+    </form>
+</div>
+include ../partials/footer
