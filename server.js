@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+require("dotenv").config();
 const router = require("./routes/index");
 const video = require("./routes/video");
 mongoose.connect(
-  "mongodb+srv://samytythb:leduc2821@cluster0.9gvnvqw.mongodb.net/MyProject?retryWrites=true&w=majority",
+  process.env.DB_MONGODB,
   (req, res) => {
     if (req) {
       return console.log("Fail");
